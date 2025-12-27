@@ -3,94 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Adventure X | Student Adventure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Adventure X</h1>
+<!-- HEADER / LOGO -->
+<header class="site-header">
+    <div class="logo">
+        ⛰️ <span>Adventure X</span>
+    </div>
     <p>Affordable Adventures for Students</p>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Adventures</a>
-    <a href="#contact">Contact</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Adventures</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
+<!-- HOME -->
 <section id="home" class="hero">
     <h2>Adventure Starts Here</h2>
     <p>Explore nature, build confidence, and create unforgettable memories.</p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
     <h2>About Us</h2>
     <p>
         Adventure X is a student-focused adventure platform providing safe,
-        budget-friendly outdoor trips like trekking, camping, and rafting.
-        Our goal is to help students learn leadership, teamwork, and self-confidence.
+        budget-friendly outdoor experiences such as trekking, camping, rafting,
+        and cycling. Our mission is to help students build leadership,
+        teamwork, and confidence through real-life adventures.
     </p>
 </section>
 
+<!-- OUR ADVENTURES -->
 <section id="services">
     <h2>Our Adventures</h2>
     <ul>
         <li>⛰️ Mountain Trekking</li>
-        <li>🏕️ Camping & Bonfire</li>
-        <li>🌊 River Rafting</li>
+        <li>🏕️ Camping & Bonfire Nights</li>
+        <li>🌊 River Rafting (Beginner Friendly)</li>
         <li>🚴 Cycling & Hiking</li>
-        <li>🏫 College Group Trips</li>
+        <li>🏫 College & Student Group Trips</li>
     </ul>
 </section>
 
+<!-- REGISTRATION -->
+<section id="register">
+    <h2>Student Registration</h2>
+    <p>Fill the form below to join Adventure X</p>
+
+    <!-- 🔴 PASTE YOUR GOOGLE FORM LINK BELOW -->
+    <iframe
+        src="PASTE_YOUR_GOOGLE_FORM_LINK_HERE"
+        width="100%"
+        height="600"
+        frameborder="0">
+    </iframe>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: adventurex@gmail.com</p>
     <p>Location: India</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2025 Adventure X | Adventure for Students</p>
+    <p>© 2025 Adventure X | Made for Students</p>
 </footer>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
-
-<section id="gallery">
-    <h2>Gallery</h2>
-    <p>Memories from our student adventures</p>
-
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Trekking">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Rafting">
-        <img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9" alt="Camping">
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="Hiking">
-        <img src="https://images.unsplash.com/photo-1526481280691-9060a8b52bfa" alt="Mountains">
-        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae" alt="Adventure">
-    </div>
-</section>
-
-<section id="register">
-    <h2>Student Registration</h2>
-    <p>Join Adventure X and start your journey</p>
-
-    <form class="reg-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="College / School Name" required>
-        <input type="number" placeholder="Mobile Number" required>
-
-        <select required>
-            <option value="">Select Adventure</option>
-            <option>Trekking</option>
-            <option>Camping</option>
-            <option>River Rafting</option>
-            <option>Cycling</option>
-        </select>
-
-        <textarea placeholder="Why do you want to join?" rows="4"></textarea>
-
-        <button type="submit">Register Now</button>
-    </form>
-</section>
