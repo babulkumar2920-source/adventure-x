@@ -1,3 +1,4 @@
+/* RESET */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,98 +6,118 @@ body {
     color: #03396c;
 }
 
-header {
+/* HEADER / LOGO */
+.site-header {
     background: #005b96;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-nav {
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar {
     background: #03396c;
     padding: 10px;
+}
+
+.menu {
     text-align: center;
 }
 
-nav a {
+.menu a {
     color: white;
-    margin: 0 15px;
+    margin: 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
+.menu a:hover {
     text-decoration: underline;
 }
 
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
 .hero {
     background: #b3cde0;
-    padding: 40px;
+    padding: 50px 20px;
     text-align: center;
 }
 
+/* COMMON SECTIONS */
 section {
-    padding: 30px;
+    padding: 40px 20px;
     margin: 10px;
 }
 
 h2 {
     color: #005b96;
+    text-align: center;
 }
 
-ul {
+/* ADVENTURES */
+#services ul {
     list-style: none;
     padding: 0;
+    max-width: 500px;
+    margin: auto;
 }
 
-ul li {
+#services li {
     background: #e6f0fa;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
 }
 
+/* REGISTRATION */
+#register {
+    background: #e6f0fa;
+    text-align: center;
+}
+
+/* CONTACT */
+#contact {
+    text-align: center;
+}
+
+/* FOOTER */
 footer {
     background: #03396c;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <p>Memories from our student adventures</p>
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
 
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Trekking">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Rafting">
-        <img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9" alt="Camping">
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="Hiking">
-        <img src="https://images.unsplash.com/photo-1526481280691-9060a8b52bfa" alt="Mountains">
-        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae" alt="Adventure">
-    </div>
-</section>
+    .menu {
+        display: none;
+    }
 
-<section id="register">
-    <h2>Student Registration</h2>
-    <p>Join Adventure X and start your journey</p>
+    .menu a {
+        display: block;
+        margin: 10px 0;
+    }
 
-    <form class="reg-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="College / School Name" required>
-        <input type="number" placeholder="Mobile Number" required>
+    .menu-toggle {
+        display: block;
+        text-align: right;
+    }
 
-        <select required>
-            <option value="">Select Adventure</option>
-            <option>Trekking</option>
-            <option>Camping</option>
-            <option>River Rafting</option>
-            <option>Cycling</option>
-        </select>
-
-        <textarea placeholder="Why do you want to join?" rows="4"></textarea>
-
-        <button type="submit">Register Now</button>
-    </form>
-</section>
+    section {
+        margin: 0;
+    }
+}
